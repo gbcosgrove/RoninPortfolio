@@ -2,8 +2,8 @@ require 'faker'
 
 10.times do |blog|
   Blog.create!(
-    title: Faker::DumbAndDumber.character,
-    body: Faker::DumbAndDumber.quote
+    title: Faker::DumbAndDumber.quote,
+    body: Faker::Hipster.paragraph
   )
 end
 
