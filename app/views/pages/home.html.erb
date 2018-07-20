@@ -1,7 +1,8 @@
-<h1>Hi, <%= current_user.first_name %></h1>
-
-<h1>Blog Posts</h1>
-<%= @posts.inspect %>
-
-<h1>Skills</h1>
-<%= @skills.inspect %>
+<main role="main" class="inner cover">
+  <h1 class="cover-heading text-center">Cover your page.</h1>
+  <p class="lead text-center">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
+  <p class="lead text-center">
+    <%= link_to "About Me", about_path, class: "btn btn-lg btn-secondary" %>
+  </p>
+  
+</main>
