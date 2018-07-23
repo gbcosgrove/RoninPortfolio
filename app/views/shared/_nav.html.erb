@@ -1,7 +1,9 @@
-<div class="<%= location %>">
-  <div><%= link_to "Home", root_path %></div>
-  <div><%= link_to "About", about_path %></div>
-  <div><%= link_to "Contact", contact_path %></div>
-  <div><%= link_to "Blog", blogs_path %></div>
-  <div><%= link_to "Portfolio", portfolios_path %></div>
+<div class="masthead clearfix">
+  <div class="inner">
+    <h3 class="masthead-brand">Greg Cosgrove</h3>
+    <nav class="nav nav-masthead app-nav">
+      <%= nav_helper 'nav-link', 'span' %>
+      <%= login_helper 'nav-link' %>
+    </nav>
+  </div>
 </div>
