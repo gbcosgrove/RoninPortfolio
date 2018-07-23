@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= @page_title %></title>
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
@@ -17,26 +15,22 @@
 
   <body>
 
+    <%= render 'shared/blog_nav' %>
+    <%= render 'shared/blog_masthead' %>
+
     <div class="container">
-      <%= render 'shared/blog_nav' %>
-      <%= login_helper %>
 
-      <%= yield %>
-    </div>
-    
-    
+      <div class="row">
 
-    
+        <%= yield %>
 
-    <% if session[:source] %>
+        <%= render 'shared/blog_sidebar' %>
+      </div>
+
+      
+
       <%= source_helper("blog") %>
-    <% end %>
-    <footer class="blog-footer">
-      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
-        <a href="#">Back to top</a>
-      </p>
-    </footer>
+    </div>
+    <%= render 'shared/blog_footer' %>
   </body>
-
 </html>

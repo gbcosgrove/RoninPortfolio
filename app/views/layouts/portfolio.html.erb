@@ -12,17 +12,13 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-    <%= login_helper %>
-
-    <%= render "shared/nav", location: "top" %>
+    <%= render 'shared/portfolio_nav' %>
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
 
     <%= yield %>
 
-    <% if session[:source] %>
-      <%= source_helper("portfolio") %>
-    <% end %>
+    <%= render 'shared/portfolio_footer' %>
+
+    <%= source_helper("application") %>
   </body>
 </html>
