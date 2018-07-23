@@ -2,6 +2,10 @@
 <html>
   <head>
     <title><%= @page_title %></title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,17 +16,27 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    <%= render "shared/nav", location: "top" %>
+    <div class="container">
+      <%= render 'shared/blog_nav' %>
+      <%= login_helper %>
 
-    <%= login_helper %>
+      <%= yield %>
+    </div>
+    
+    
 
-    <%= yield %>
+    
 
     <% if session[:source] %>
       <%= source_helper("blog") %>
     <% end %>
+    <footer class="blog-footer">
+      <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
   </body>
+
 </html>
