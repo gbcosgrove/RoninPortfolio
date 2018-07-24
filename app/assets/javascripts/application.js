@@ -11,8 +11,6 @@
 // about supported directives.
 //= require rails-ujs
 //= require activestorage
-//= require cable
-//= require turbolinks
 //= require jquery3
 //= require popper
 //= require bootstrap
@@ -21,4 +19,6 @@
 //= require html.sortable
 //= require cocoon
 //= require gritter
+//= require cable
+//= require turbolinks
 //= require_tree .
